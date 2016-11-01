@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.opendream.thaispendingwatch.activity.NotificationActivity">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="org.cm.podd.urban.report.helper.BindingUtils" />
+
+        <!--<variable name="notification" type="com.opendream.thaispendingwatch.model.Notification" />-->
+        <variable
+            name="notification"
+            type="org.cm.podd.urban.report.data.Notification.Model" />
+
+        <variable
+            name="user"
+            type="org.cm.podd.urban.report.data.User.Model" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/cell_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:background="@drawable/bg_row"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:orientation="horizontal">
+            <!--android:background="@drawable/btn_row"-->
+
+            <LinearLayout
+                android:id="@+id/cell_text_wrapper"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/user_noti"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="@{user.name}"
+                    android:textColor="@color/TextBlack"
+                    android:textStyle="bold" />
+                <!--android:text="@{String.valueOf(user.display_name)}"-->
+                <!--android:visibility="@{notification.disableUserField()?View.GONE:View.VISIBLE}"-->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="7dp"
+                        android:src="@mipmap/ic_support_active"
+                        app:resourceView="@{notification.getNotificationIcon()}"/>
+
+                    <TextView
+                        android:id="@+id/textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/user_noti"
+                        android:layout_marginBottom="5dp"
+                        android:text="@{notification.getRenderWebMessage}"
+                        android:textColor="@color/TextBlack" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textview"
+                    android:layout_marginTop="5dp"
+                    android:text="@{notification.getCreatedString()}"
+                    android:textColor="@color/textHintGrey"
+                    android:textSize="12dp" />
+                <!--app:passDuration="@{notification.created_at}"-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="@{notification.hideImageView()?View.GONE:View.VISIBLE}"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="right|center">
+
+                <ImageView
+                    android:id="@+id/profile_image_imageview"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:clickable="true"
+                    android:src="@mipmap/example_add_img"
+                    app:thumbnailImage="@{notification.reportFirstThumbnailUrl}" />
+            </LinearLayout>
+            <!--app:imageUrl="@{notification.image}" -->
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/dividerGrey" />
+
+    </LinearLayout>
+</layout>

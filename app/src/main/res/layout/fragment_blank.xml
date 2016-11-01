@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.cm.podd.urban.report.fragment.BlankFragment"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:gravity="center">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/intro_title02"
+        android:gravity="center"
+        style="@style/CustomBoldText"
+        android:textSize="22sp"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/intro_desc02"
+        android:gravity="center"
+        style="@style/CustomText"
+        android:textColor="@color/textHintGrey"/>
+
+    <Button
+        android:id="@+id/login_button"
+        style="@style/CustomText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_grey_radius"
+        android:src="@mipmap/img_register_email"
+        android:text="เข้าสู่ระบบ"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:layout_marginTop="20dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/img_register_email"
+        android:layout_marginTop="50dp"/>
+
+</LinearLayout>

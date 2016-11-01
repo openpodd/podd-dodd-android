@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_white_radius"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/CustomText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_vertical"
+            android:text="ชนิดสัตว์"
+            android:textColor="@color/textGrey" />
+        <EditText
+            android:id="@+id/animal_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_radius"
+            android:hint="โปรดระบุ"
+            android:lines="1"
+            android:gravity="top"
+            android:padding="10dp"
+            android:textColorHint="@color/textHintGrey" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_white_radius"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/CustomText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_vertical"
+            android:text="อาการที่พบ"
+            android:textColor="@color/textGrey" />
+        <EditText
+            android:id="@+id/symptom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_radius"
+            android:hint="อาการป่วย หรือลักษณะซากสัตว์"
+            android:lines="3"
+            android:gravity="top"
+            android:padding="10dp"
+            android:textColorHint="@color/textHintGrey" />
+    </LinearLayout>
+
+    <org.cm.podd.urban.report.widget.VolumnLinearLayout
+        android:id="@+id/number_picker1"
+        app:volumn_title="จำนวนสัตว์ป่วย"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </org.cm.podd.urban.report.widget.VolumnLinearLayout>
+
+    <org.cm.podd.urban.report.widget.VolumnLinearLayout
+        android:id="@+id/number_picker2"
+        app:volumn_title="จำนวนสัตว์ตาย"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </org.cm.podd.urban.report.widget.VolumnLinearLayout>
+
+
+</LinearLayout>

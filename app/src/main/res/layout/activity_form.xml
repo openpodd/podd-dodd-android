@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="datetime"
+            type="org.cm.podd.urban.report.activity.report.ReportFormActivity.DateTimeViewModel" />
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinateLayoutRootView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="org.cm.podd.urban.report.activity.report.ReportFormActivity">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.AppBarLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/wrapper_linearlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical">
+
+
+                    <include
+                        layout="@layout/cell_form_default"
+                        bind:datetime="@{datetime}" />
+                    <!--<include layout="@layout/cell_form_animal_die" />-->
+                    <!--<include layout="@layout/cell_form_animal_bite" />-->
+                    <!--<include layout="@layout/cell_form_use_oil" />-->
+                    <!--<include layout="@layout/cell_form_cheapmeat" />-->
+                    <!--<include layout="@layout/cell_form_food_dirty" />-->
+                    <!--<include layout="@layout/cell_form_moreinfo" />-->
+                    <!--<include layout="@layout/cell_form_food_poinsioning" />-->
+                    <!--<include layout="@layout/cell_form_anonymous" />-->
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</layout>

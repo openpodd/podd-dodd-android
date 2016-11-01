@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable name="report" type="org.cm.podd.urban.report.data.Report.Model" />
+        <variable name="support_view" type="org.cm.podd.urban.report.data.SupportButtonViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_overlay"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="org.cm.podd.urban.report.activity.report.SupportActivity">
+
+        <LinearLayout
+            android:id="@+id/block_support"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:background="@drawable/btn_white_radius"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                style="@style/CustomText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:gravity="center_horizontal"
+                android:text="คุณต้องการสนับสนุนในทิศทางใด"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:weightSum="2">
+
+                <ToggleButton
+                    android:id="@+id/me_too_togglebutton"
+                    style="@style/CustomText"
+                    android:checked="@{support_view.isMeToo()}"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/togge_support"
+                    android:drawableLeft="@mipmap/ic_btn_agree"
+                    android:gravity="center"
+                    android:minHeight="0dp"
+                    android:paddingBottom="7dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="7dp"
+                    android:textOn="ประสบด้วย"
+                    android:textOff="ประสบด้วย"
+                    android:textColor="@color/textWhite" />
+
+                <ToggleButton
+                    android:checked="@{support_view.isLike()}"
+                    android:id="@+id/like_togglebutton"
+                    style="@style/CustomText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/togge_support"
+                    android:drawableLeft="@mipmap/ic_btn_giveheart"
+                    android:minHeight="0dp"
+                    android:paddingBottom="7dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="7dp"
+                    android:textOn="ให้กำลังใจ"
+                    android:textOff="ให้กำลังใจ"
+                    android:textColor="@color/textWhite" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:visibility="@{support_view.isMeToo()?View.VISIBLE:View.GONE}"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/ic_like_active"
+                android:drawablePadding="5dp"
+                android:text="คุณประสบด้วยกับรายงานนี้"
+                android:textColor="@color/textHintGrey"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:visibility="@{support_view.isLike()?View.VISIBLE:View.GONE}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/ic_support_active"
+                android:drawablePadding="5dp"
+                android:text="คุณให้กำลังใจรายงานนี้"
+                android:textColor="@color/textHintGrey" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/block_support"
+            android:background="@drawable/btn_white_radius"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                style="@style/CustomText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="แสดงความคิดเห็น" />
+
+            <EditText
+                android:id="@+id/comment_edittextview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_radius"
+                android:gravity="top"
+                android:lines="5"
+                android:padding="5dp" />
+
+            <Button
+                android:id="@+id/confirm_buttonview"
+                style="@style/CustomText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/btn_green_radius"
+                android:minHeight="0dp"
+                android:paddingBottom="7dp"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:paddingTop="7dp"
+                android:text="ยืนยัน"
+                android:textColor="@color/textWhite" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_white_radius"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/CustomText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_vertical"
+            android:text="ประเภทเนื้อสัตว์"
+            android:textColor="@color/textGrey" />
+        <RadioGroup
+            android:id="@+id/radio_type_meat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="เนื้อวัว"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                style="@style/CustomText"
+                android:textColor="@color/textGrey"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/dividerGrey" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="เนื้อไก่"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                style="@style/CustomText"
+                android:textColor="@color/textGrey"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/dividerGrey" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="เนื้อหมู"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                style="@style/CustomText"
+                android:textColor="@color/textGrey"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/dividerGrey" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="เนื้อควาย"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                style="@style/CustomText"
+                android:textColor="@color/textGrey"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/dividerGrey" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="อื่นๆ"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                style="@style/CustomText"
+                android:textColor="@color/textGrey"/>
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/other_animal_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_radius"
+            android:hint="ชื่อประเภทเนื้อสัตว์"
+            android:lines="1"
+            android:gravity="top"
+            android:padding="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColorHint="@color/textHintGrey" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/dividerGrey" />
+        <TextView
+            style="@style/CustomText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_vertical"
+            android:text="ราคาต่อกิโลกรัม (บาท)"
+            android:textColor="@color/textGrey"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_radius"
+            android:hint="ราคาที่พบ"
+            android:lines="1"
+            android:gravity="top"
+            android:padding="10dp"
+            android:textColorHint="@color/textHintGrey"
+            android:id="@+id/price_kg_edittext" />
+    </LinearLayout>
+
+</LinearLayout>

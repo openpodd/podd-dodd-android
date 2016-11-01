@@ -1,0 +1,43 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 14px;
+	line-height: 1.5em;
+	padding: 15px;
+	font-family: 'boon300';
+}
+
+@font-face {
+    font-family: 'boon300';
+    src: url('file:///android_asset/www/boon-300-webfont.eot');
+    src: url('file:///android_asset/www/boon-300-webfont.eot?#iefix') format('embedded-opentype'),
+         url('file:///android_asset/www/boon-300-webfont.woff2') format('woff2'),
+         url('file:///android_asset/www/boon-300-webfont.woff') format('woff'),
+         url('file:///android_asset/www/boon-300-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+p {
+	margin-bottom: 1.5em;
+}
+
+img {
+	width: 100%;
+	height: auto;
+	margin-bottom: 0.5em
+}
+
+h1, h2, h3 {
+	line-height: 1.5em;
+	margin-bottom: 0.7em;
+}
+
+ul {
+	margin-left: 30px;
+	margin-bottom: 15px;
+}

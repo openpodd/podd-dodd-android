@@ -1,0 +1,27 @@
+<resources>
+
+    <!-- Declare custom theme attributes that allow changing which styles are
+         used for button bars depending on the API level.
+         ?android:attr/buttonBarStyle is new as of API 11 so this is
+         necessary to support previous API levels. -->
+    <declare-styleable name="ButtonBarContainerTheme">
+        <attr name="metaButtonBarStyle" format="reference" />
+        <attr name="metaButtonBarButtonStyle" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="VolumnLinearLayout">
+        <attr name="volumn_title" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="ComplexCircleLinearLayout">
+        <attr name="od_circleTextColor" format="color" />
+        <attr name="od_circleColor" format="color" />
+        <attr name="od_titleColor" format="color" />
+        <attr name="od_level" format="integer" />
+        <attr name="od_number" format="string" />
+        <attr name="od_title" format="string" />
+        <attr name="od_type" format="string" />
+        <attr name="od_mipmap" format="reference" />
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.opendream.thaispendingwatch.activity.NotificationActivity">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="org.cm.podd.urban.report.helper.BindingUtils" />
+
+        <!--<variable name="notification" type="com.opendream.thaispendingwatch.model.Notification" />-->
+        <variable
+            name="comment"
+            type="org.cm.podd.urban.report.data.Comment.Model" />
+
+        <variable
+            name="user"
+            type="org.cm.podd.urban.report.data.User.Model" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:id="@+id/img_avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_gravity="left"
+                android:src="@mipmap/default_image_profile"
+                app:profileInListView="@{user.getAvatarImageUrl()}" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-1dp"
+            android:layout_toRightOf="@+id/img_avatar"
+            android:src="@mipmap/arrow_comment" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-10dp"
+            android:layout_toRightOf="@+id/img_arrow"
+            android:background="@drawable/bg_comment_radius"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                style="@style/CustomBoldText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="@{user.name}"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="@{comment.message}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{comment.getCreatedAt()}"
+                android:textColor="@color/textHintGrey"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

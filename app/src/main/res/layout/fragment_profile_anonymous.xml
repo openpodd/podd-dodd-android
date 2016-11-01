@@ -1,0 +1,30 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <!--<import type="com.opendream.thaispendingwatch.helper.BindingUtils" />-->
+        <import type="android.text.Html" />
+
+        <import type="org.cm.podd.urban.report.helper.BindingUtils" />
+
+        <variable
+            name="user"
+            type="org.cm.podd.urban.report.data.User.Model" />
+
+        <variable
+            name="report"
+            type="org.cm.podd.urban.report.data.Report.Model" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="org.cm.podd.urban.report.fragment.ProfileFragment">
+
+        <include layout="@layout/fragment_blank" />
+
+    </FrameLayout>
+
+</layout>

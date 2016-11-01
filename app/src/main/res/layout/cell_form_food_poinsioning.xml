@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_white_radius"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/CustomText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:drawableLeft="@mipmap/ic_heart"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="อาการที่พบ"
+            android:textColor="@color/textGrey" />
+
+        <CheckBox
+            android:id="@+id/checkbox_symptom_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="คลื่นไส้/อาเจียน"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            style="@style/CustomText"
+            android:textColor="@color/textGrey"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/dividerGrey" />
+
+        <CheckBox
+            android:id="@+id/checkbox_symptom_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ท้องร่วง"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            style="@style/CustomText"
+            android:textColor="@color/textGrey"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="อาการเพิ่มเติมอื่นๆ"
+            android:textColor="@color/textGrey"
+            style="@style/CustomText"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_radius"
+            android:hint="อาการอื่นๆ ของคนป่วย"
+            android:lines="1"
+            android:gravity="top"
+            android:padding="10dp"
+            android:textColorHint="@color/textHintGrey"
+            android:id="@+id/other_symptom_edtitext" />
+
+        <TextView
+            style="@style/CustomText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_vertical"
+            android:text="อาหารที่สงสัย"
+            android:textColor="@color/textGrey"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_radius"
+            android:hint="ชื่ออาหารที่สงสัยว่าเป็นสาเหตุ"
+            android:lines="1"
+            android:gravity="top"
+            android:padding="10dp"
+            android:textColorHint="@color/textHintGrey"
+            android:id="@+id/food_suspect_edittext" />
+
+        <!--<TextView-->
+            <!--style="@style/CustomText"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:text="ข้อความรายงาน"-->
+            <!--android:textColor="@color/textGrey"-->
+            <!--android:paddingTop="10dp"-->
+            <!--android:paddingBottom="5dp"/>-->
+        <!--<EditText-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@drawable/edittext_radius"-->
+            <!--android:hint="รายละเอียดเหตุการณ์์"-->
+            <!--android:lines="3"-->
+            <!--android:gravity="top"-->
+            <!--android:padding="10dp"-->
+            <!--android:textColorHint="@color/textHintGrey"-->
+            <!--android:id="@+id/event_edtitext" />-->
+    </LinearLayout>
+
+    <org.cm.podd.urban.report.widget.VolumnLinearLayout
+        android:id="@+id/number_picker1"
+        app:volumn_title="จำนวนคนป่วย"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </org.cm.podd.urban.report.widget.VolumnLinearLayout>
+
+</LinearLayout>

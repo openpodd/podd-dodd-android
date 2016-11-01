@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="10dp"
+    android:paddingBottom="20dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_white_radius"
+        android:orientation="vertical"
+        android:padding="10dp">
+        <TextView
+            style="@style/CustomText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:drawableLeft="@mipmap/ic_anonymous"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="รายงานแบบไม่ระบุตัวตน"
+            android:textColor="@color/textGrey" />
+        <Switch
+            android:id="@+id/delete_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:switchMinWidth="0dp"
+            android:textOff=""
+            android:textOn=""
+            android:text="ผู้อ่านรายงานจะไม่สามารถระบุได้ว่าใครเป็นผู้รายงาน"
+            android:textColor="@color/textHintGrey"
+            android:textSize="13sp"/>
+        <Button
+            android:id="@+id/submit_report_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="รายงาน"
+            android:background="@drawable/btn_report_radius"
+            android:textColor="@color/textWhite"
+            android:layout_gravity="center"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:minHeight="0dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            style="@style/CustomText"/>
+    </LinearLayout>
+
+</LinearLayout>

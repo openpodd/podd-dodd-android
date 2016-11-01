@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="user"
+            type="org.cm.podd.urban.report.data.User.Model" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:background="#F4F4F4"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/dividerGrey" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/textWhite"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            android:weightSum="4">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:orientation="vertical">
+
+                <EditText
+                    style="@style/CustomText"
+                    android:id="@+id/name_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:drawableLeft="@mipmap/ic_name"
+                    android:drawablePadding="10dp"
+                    android:hint="ชื่อ"
+                    android:paddingBottom="20dp"
+                    android:text="@{user.firstName}"
+                    android:textColorHint="@color/textHintGrey" />
+
+                <EditText
+                    style="@style/CustomText"
+                    android:visibility="gone"
+                    android:id="@+id/email_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:drawableLeft="@mipmap/ic_email"
+                    android:drawablePadding="10dp"
+                    android:hint="อีเมล"
+                    android:text="@{user.email}"
+                    android:paddingBottom="20dp"
+                    android:textColorHint="@color/textHintGrey" />
+
+                <EditText
+                    style="@style/CustomText"
+                    android:id="@+id/telephone_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:drawableLeft="@mipmap/ic_phone"
+                    android:drawablePadding="10dp"
+                    android:text="@{user.telephone}"
+                    android:hint="เบอร์โทรศัพท์"
+                    android:paddingBottom="20dp"
+                    android:textColorHint="@color/textHintGrey" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:id="@+id/edit_profile_linearlayout">
+
+                <ImageView
+                    android:id="@+id/img_avatar"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/default_image_profile"
+                    app:profileInListView="@{user.getAvatarThumbnail()}" />
+
+                <TextView
+                    style="@style/CustomText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="แก้ไข"
+                    android:textColor="@color/btnGreen" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/dividerGrey" />
+    </LinearLayout>
+</layout>

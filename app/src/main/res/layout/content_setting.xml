@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4f4f4"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f4f4f4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/profile_linearlayout_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/CustomText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="ข้อมูลผู้ใช้"
+                    android:textColor="@color/textGrey"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/edit_profile_textview"
+                    style="@style/CustomText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:background="@drawable/bg_row"
+                    android:drawableRight="@mipmap/ic_arrow_right"
+                    android:padding="15dp"
+                    android:text="แก้ไขข้อมูลส่วนตัว" />
+
+                <TextView
+                    android:id="@+id/edit_password_textview"
+                    style="@style/CustomText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/bg_row"
+                    android:drawableRight="@mipmap/ic_arrow_right"
+                    android:padding="15dp"
+                    android:text="เปลี่ยนรหัสผ่าน" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/CustomText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="เกี่ยวกับแอปพลิเคชัน"
+                android:textColor="@color/textGrey"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/term_and_condition_textview"
+                style="@style/CustomText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/bg_row"
+                android:drawableRight="@mipmap/ic_arrow_right"
+                android:padding="15dp"
+                android:text="ข้อตกลงและเงื่อนไข" />
+
+            <TextView
+                android:id="@+id/about_textview"
+                style="@style/CustomText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_row"
+                android:drawableRight="@mipmap/ic_arrow_right"
+                android:padding="15dp"
+                android:text="เกี่ยวกับดูดีดี" />
+
+            <TextView
+                style="@style/CustomText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="เวอร์ชันของแอปพลิเคชัน"
+                android:textColor="@color/textGrey"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/textWhite"
+                android:padding="15dp"
+                android:layout_marginBottom="1dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="เวอร์ชัน"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/version_build_text"
+                    style="@style/CustomText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/textWhite"
+                    android:text="10.0" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/textWhite"
+                android:padding="15dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="รหัสเวอร์ชัน"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/version_name_text"
+                    style="@style/CustomText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/textWhite"
+                    android:text="10.0" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/logout_textview"
+                style="@style/CustomText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/bg_row"
+                android:drawableRight="@mipmap/ic_arrow_right"
+                android:padding="15dp"
+                android:text="ออกจากระบบ" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

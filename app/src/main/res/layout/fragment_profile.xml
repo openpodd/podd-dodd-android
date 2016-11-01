@@ -1,0 +1,53 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <!--<import type="com.opendream.thaispendingwatch.helper.BindingUtils" />-->
+        <import type="android.text.Html" />
+
+        <import type="org.cm.podd.urban.report.helper.BindingUtils" />
+
+        <variable
+            name="user"
+            type="org.cm.podd.urban.report.data.User.Model" />
+
+        <variable
+            name="report"
+            type="org.cm.podd.urban.report.data.Report.Model" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/textWhite"
+        android:orientation="vertical"
+        tools:context="org.cm.podd.urban.report.fragment.ProfileFragment">
+
+
+        <include layout="@layout/content_list_view" />
+    </LinearLayout>
+
+
+    <!--<com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:sothree="http://schemas.android.com/apk/res-auto"-->
+    <!--android:id="@+id/sliding_layout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:gravity="bottom"-->
+    <!--sothree:umanoDragView="@id/recyclerview_relaytive_wrapper_drag_view"-->
+    <!--sothree:umanoPanelHeight="150dp"-->
+    <!--sothree:umanoScrollableView="@id/recyclerview"-->
+    <!--sothree:umanoShadowHeight="4dp">-->
+
+
+    <!--<include-->
+    <!--layout="@layout/content_profile"-->
+    <!--bind:user="@{user}" />-->
+
+    <!--<include layout="@layout/content_list_view" />-->
+
+
+    <!--</com.sothree.slidinguppanel.SlidingUpPanelLayout>-->
+
+</layout>

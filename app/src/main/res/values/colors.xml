@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#243944</color>
+    <color name="colorPrimaryDark">#243944</color>
+    <color name="colorAccent">#36BDD0</color>
+
+    <color name="catPeople">#F4A60C</color>
+    <color name="catAnimal">#CF6221</color>
+    <color name="catEnvironment">#96B220</color>
+    <color name="catPodd">#A079B5</color>
+
+    <color name="textWhite">#ffffff</color>
+    <color name="textHintGrey">#999999</color>
+    <color name="textGrey">#666666</color>
+    <color name="textDarkGrey">#333333</color>
+    <color name="textRecommend">#CF6221</color>
+
+    <color name="dividerGrey">#cccccc</color>
+
+    <color name="btnGreen">#36BDD0</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="bg_dragable">#d9ffffff</color>
+
+    <color name="bg_guide01">#F47D1C</color>
+    <color name="bg_comment">#EAEAEA</color>
+
+    <color name="TextBlack">#000000</color>
+
+    <item name="grey_50" type="color">#999999</item>
+
+    <color name="TextGrey">#C1C1C1</color>
+</resources>

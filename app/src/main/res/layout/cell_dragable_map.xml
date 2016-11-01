@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="org.cm.podd.urban.report.helper.BindingUtils" />
+
+        <variable
+            name="summary"
+            type="org.cm.podd.urban.report.data.Report.SummaryModel" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/dragView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="false"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/pull_stats" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+            android:background="@color/bg_dragable">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="4dp"
+                        android:text="@{summary.total}"
+                        android:textColor="@color/btnGreen"
+                        android:textSize="39dp" />
+
+                    <TextView
+                        style="@style/CustomText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_allreport"
+                        android:layout_marginTop="3dp"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@mipmap/ic_top_report" />
+
+                    <TextView
+                        style="@style/CustomText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="13dp"
+                        android:text="@string/report_top3"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <TextView
+                style="@style/CustomText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:text="จากพื้นที่ของคุณใน 90 วันที่ผ่านมา"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <ScrollView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/bg_dragable">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- HERE -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipChildren="false"
+                        android:orientation="vertical"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="80dp"
+                            android:gravity="top"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="10dp"
+                                android:text="392"
+                                android:textColor="@color/btnGreen"
+                                android:textSize="26sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                style="@style/CustomText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="รายงานทั้งหมดจากพื้นที่ของคุณใน 30 วัน ที่ผ่านมา"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+
+                        <android.support.percent.PercentRelativeLayout
+                            android:layout_width="300dp"
+                            android:layout_height="300dp"
+                            android:layout_gravity="center"
+                            android:clipChildren="false"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:src="@mipmap/circle_stat" />
+
+
+                            <org.cm.podd.urban.report.widget.ComplexCircleLinearLayout
+                                android:layout_width="160dp"
+                                android:layout_height="160dp"
+                                android:layout_marginLeft="-20dp"
+                                android:layout_marginTop="45dp"
+                                app:circleLevel="@{summary.getHumanLevel()}"
+                                app:circleNumber="@{summary.getHumanCount()}"
+                                app:od_circleColor="@color/catPeople"
+                                app:od_circleTextColor="@color/textWhite"
+                                app:od_mipmap="@mipmap/ic_circle_human"
+                                app:od_title="คน"
+                                app:od_titleColor="@color/catPeople" />
+
+                            <org.cm.podd.urban.report.widget.ComplexCircleLinearLayout
+                                android:layout_width="160dp"
+                                android:layout_height="160dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="0dp"
+                                android:layout_marginTop="0dp"
+                                app:circleLevel="@{summary.getEnvLevel()}"
+                                app:circleNumber="@{summary.getEnvCount()}"
+                                app:od_circleColor="@color/catEnvironment"
+                                app:od_circleTextColor="@color/textWhite"
+                                app:od_mipmap="@mipmap/ic_circle_environment"
+                                app:od_title="สิ่งแวดล้อม"
+                                app:od_titleColor="@color/catEnvironment" />
+
+
+                            <org.cm.podd.urban.report.widget.ComplexCircleLinearLayout
+                                android:layout_width="160dp"
+                                android:layout_height="160dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginBottom="0dp"
+                                android:layout_marginRight="15dp"
+                                app:circleLevel="@{summary.getAnimalLevel()}"
+                                app:circleNumber="@{summary.getAnimalCount()}"
+                                app:od_circleColor="@color/catAnimal"
+                                app:od_circleTextColor="@color/textWhite"
+                                app:od_mipmap="@mipmap/ic_circle_animal_white"
+                                app:od_title="สัตว์"
+                                app:od_titleColor="@color/catAnimal" />
+
+                        </android.support.percent.PercentRelativeLayout>
+
+                        <TextView
+                            style="@style/CustomText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@mipmap/ic_top_report"
+                            android:drawablePadding="5dp"
+                            android:gravity="center_vertical"
+                            android:text="รายงาน 3 อันดับแรกในพื้นที่ของคุณ"
+                            android:textColor="@color/textDarkGrey"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="15dp"
+                            android:paddingTop="15dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="7dp"
+                                android:src="@mipmap/ic_num1" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15dp"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{summary.reports[0]}"
+                                    android:textColor="@color/btnGreen"
+                                    android:textSize="24dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    style="@style/CustomText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="0dp"
+                                    android:text="รายงาน"
+                                    android:textColor="@color/textGrey"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                            <TextView
+                                style="@style/CustomText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:text="@{summary.texts[0]}"
+                                android:textSize="16dp" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/dividerGrey" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="15dp"
+                            android:paddingTop="15dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="7dp"
+                                android:src="@mipmap/ic_num2" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15dp"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{summary.reports[1]}"
+                                    android:textColor="@color/btnGreen"
+                                    android:textSize="24dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    style="@style/CustomText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="-5dp"
+                                    android:text="รายงาน"
+                                    android:textColor="@color/textGrey"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                            <TextView
+                                style="@style/CustomText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:text="@{summary.texts[1]}"
+                                android:textSize="16dp" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/dividerGrey" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="15dp"
+                            android:paddingTop="15dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="7dp"
+                                android:src="@mipmap/ic_num3" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15dp"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{summary.reports[2]}"
+                                    android:textColor="@color/btnGreen"
+                                    android:textSize="24dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    style="@style/CustomText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="-5dp"
+                                    android:text="รายงาน"
+                                    android:textColor="@color/textGrey"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                            <TextView
+                                style="@style/CustomText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:text="@{summary.texts[2]}"
+                                android:textSize="16dp" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/dividerGrey" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

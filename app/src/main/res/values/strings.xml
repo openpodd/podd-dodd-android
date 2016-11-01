@@ -1,0 +1,112 @@
+<resources>
+    <string name="app_name">ดูดีดี</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="report_top3">รายงาน 3\nอันดับแรก</string>
+    <string name="label_allreport">ทั้งหมด\nรายงาน</string>
+    <string name="title_activity_report">ประเภทของรายงาน</string>
+    <string name="title_activity_report_list">ReportList</string>
+    <string name="title_activity_login">ลงทะเบียน</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">คุณยังไม่ได้ใส่ข้อมูล</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+    <string name="title_activity_splash">ดูดีดี</string>
+    <string name="title_activity_main2">ดูดีดี</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="action_skip_login">ยังไม่เข้าร่วม</string>
+
+    <string name="title_activity_guide">GuideActivity</string>
+    <string name="guide_title_section1">Section 1</string>
+    <string name="guide_title_section2">Section 2</string>
+    <string name="guide_title_section3">Section 3</string>
+    <string name="guide_title_section0">Section 4</string>
+
+    <string name="title_activity_user_login">สิทธิ์เข้าถึงการรายงาน</string>
+    <string name="title_activity_register_email">สิทธิ์การเข้าถึงการรายงาน</string>
+    <string name="label_regiter_email">กรอกอีเมลของคุณเพื่อขอรหัสผ่าน\nและเข้าสู่ระบบ</string>
+
+    <string name="intro_title00">ใช้งานได้ในทุกชุมชน</string>
+    <string name="intro_desc00">และดำเนินการตอบกลับรายงาน\nจากหน่วยงานที่เกี่ยวข้อง\nเฉพาะในจังหวัดเชียงใหม่</string>
+    <string name="intro_title01">สุขภาพหนึ่งเดียว</string>
+    <string name="intro_desc01">สุขภาพชุมชนของเราเป็นสิ่งสำคัญ\nคุณก็เป็นส่วนหนึ่งที่ร่วมดูแลได้</string>
+    <string name="intro_title02">ร่วมด้วยช่วยกันรายงาน</string>
+    <string name="intro_desc02">บอกปัญหาให้ทุกคนรู้ เพียงถ่ายรูป\nและส่งรายละเอียดผ่านแอปพลิเคชัน</string>
+    <string name="intro_title03">ช่วยกันดูแลชุมชนของเรา</string>
+    <string name="intro_desc03">ปัญหาที่คุณพบอาจจะมีเพื่อนคนอื่น\nประสบเหมือนกันอยู่\nมาพูดคุยและช่วยเหลือกัน</string>
+
+    <string name="title_activity_edit_profile">แก้ไขข้อมูลส่วนตัว</string>
+    <string name="title_activity_register_complete">สิทธิ์เข้าถึงการรายงาน</string>
+    <string name="desc_register_complete">คุณสามารถรายงานปัญหาที่คุณพบ\nผ่านแอปพลิเคชัน Onehealth</string>
+    <string name="facebook_app_id">1655221314690530</string>
+    <string name="title_activity_report_detail">ข้อมูลรายงาน</string>
+    <string name="label_allpost">รายงานทั้งหมด</string>
+    <string name="label_supported">ได้รับการสนับสนุน</string>
+    <string name="title_activity_form">รายงาน</string>
+    <string name="share_link_intent">Share link!</string>
+    <string name="title_activity_dialogue_support">DialogueSupportActivity</string>
+    <string name="IC_CAT_HUMAN">คน</string>
+    <string name="IC_CAT_HUMAN_FOOD_POISON">อาหารเป็นพิษ</string>
+    <string name="IC_CAT_HUMAN_FOOD_DIRTY_SHOP">ร้าน / เขียงไม่สะอาด</string>
+    <string name="IC_CAT_HUMAN_FOOD_CONTAMINATED_SUSPECTED">สงสัยอาหารปนเปื้อน</string>
+    <string name="IC_CAT_HUMAN_FOOD_TOO_CHEAP_MEAT">เนื้อสัตว์ราคาถูกจนผิดปกติ</string>
+    <string name="IC_CAT_HUMAN_FOOD_REPEATED_USED_OIL">อาหารใช้น้ำมันทอดซ้ำ</string>
+    <string name="IC_CAT_HUMAN_DRUG_FAKE_DRUG">ยาชุด / ยาปลอม</string>
+    <string name="IC_CAT_HUMAN_DRUG_NON_FDA"><![CDATA[ยาหรือสมุนไพรไม่มี อย.]]></string>
+    <string name="IC_CAT_HUMAN_DANGER_COSMETIC">เครื่องสำอางอันตราย</string>
+    <string name="IC_CAT_ANIMAL">สัตว์</string>
+    <string name="IC_CAT_ANIMAL_BITTEN">สัตว์กัด</string>
+    <string name="IC_CAT_ANIMAL_DEAD">สัตว์ป่วย / ตาย</string>
+    <string name="IC_CAT_ENVI">สิ่งแวดล้อม</string>
+    <string name="IC_CAT_ENVI_NOISY">เสียงดัง</string>
+    <string name="IC_CAT_ENVI_GARBAGE">ขยะ</string>
+    <string name="IC_CAT_ENVI_DIRTY_WATER">น้ำเสีย</string>
+    <string name="IC_CAT_ENVI_MOSQUITO_PROPAGATE">แหล่งเพาะพันธุ์ยุง</string>
+    <string name="IC_CAT_ENVI_SMOG">ควัน / เผาในที่แจ้ง</string>
+    <string name="IC_CAT_ENVI_FIRE">ไฟป่า / เผาป่า</string>
+    <string name="IC_CAT_ENVI_FLOOD">น้ำป่าไหลหลาก</string>
+    <string name="title_activity_forgot_password">ขอรหัสผ่านใหม่</string>
+    <string name="title_activity_edit_password">เปลี่ยนรหัสผ่าน</string>
+    <string name="title_activity_blank">BlankActivity</string>
+    <string name="title_activity_policy_webview">PolicyWebviewActivity</string>
+    <string name="title_activity_about_webview">AboutWebviewActivity</string>
+    <string name="dialogue_offchiangmai">ขออภัย ในตอนนี้แอปพลิเคชั่นสามารถรายงานเหตุการณ์ได้เฉพาะพื้นที่จังหวัดเชียงใหม่เท่านั้น</string>
+    <string name="internet_connection_error">เกิดข้อผิดพลาด\nขณะเชื่อมต่อ</string>
+    <string name="one_image_required">คุณต้องเลือกรูปภาพอย่างน้อย 1 รูป</string>
+    <string name="choose_one">Choose</string>
+    <string name="female">หญิง</string>
+    <string name="male">ชาย</string>
+    <string name="choose_gender_title">กรุณาเลือกเพศ</string>
+    <string name="text_choose_photo">เลือกรูปภาพ</string>
+    <string name="text_gallery">อัลบั้มภาพ</string>
+    <string name="text_take_a_picture">กล้องถ่ายรูป</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">Ok</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="message_confirm_dialog">Are you sure?</string>
+    <string name="location_error">ไม่สามารถระบุตำแหน่งของคุณได้ กรุณาตรวจสอบว่าคุณได้เปิดตำแหน่งแล้วหรือไม่</string>
+    <string name="network_error">เกิดข้อผิดพลาดขณะเชื่อมต่อ</string>
+    <string name="choose_photo">เลือกรูปถ่ายเพื่อประกอบ\nการรายงานอย่างน้อย 1 รูป</string>
+
+    <string-array name="gender_list">
+        <item>หญิง</item>
+        <item>ชาย</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_white_radius"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+            <TextView
+                style="@style/CustomText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:drawableLeft="@mipmap/ic_more"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:text="ข้อความรายงาน"
+                android:textColor="@color/textGrey" />
+            <EditText
+                android:id="@+id/remark_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_radius"
+                android:hint="รายละเอียดเหตุการณ์"
+                android:lines="3"
+                android:gravity="top"
+                android:padding="10dp"
+                android:textColorHint="@color/textHintGrey" />
+    </LinearLayout>
+
+</LinearLayout>
