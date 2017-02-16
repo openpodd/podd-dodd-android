@@ -107,7 +107,10 @@ dependencies {
     compile 'com.amazonaws:aws-android-sdk-core:2.+'
     compile 'com.amazonaws:aws-android-sdk-s3:2.+'
     compile 'com.parse.bolts:bolts-android:1.2.1'
-    compile('com.crashlytics.sdk.android:crashlytics:2.5.2@aar') {
+//    compile('com.crashlytics.sdk.android:crashlytics:2.5.2@aar') {
+//        transitive = true;
+//    }
+    compile('com.crashlytics.sdk.android:crashlytics:2.6.6@aar') {
         transitive = true;
     }
 

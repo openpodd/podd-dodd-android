@@ -11,7 +11,6 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
 
@@ -93,7 +92,7 @@
 
         <meta-data
             android:name="io.fabric.ApiKey"
-            android:value="96301155506cd35d841ea153657978e3979ee19a" />
+            android:value="36e833365a5bd6131977037cd9e6d1f8067c2198" />
 
         <activity
             android:name=".activity.profile.EditProfileActivity"
