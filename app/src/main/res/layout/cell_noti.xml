@@ -101,7 +101,6 @@
                     android:id="@+id/profile_image_imageview"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
-                    android:clickable="true"
                     android:src="@mipmap/example_add_img"
                     app:thumbnailImage="@{notification.reportFirstThumbnailUrl}" />
             </LinearLayout>

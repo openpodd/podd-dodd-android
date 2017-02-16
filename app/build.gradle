@@ -27,8 +27,8 @@ android {
         applicationId "org.cm.podd.urban.report"
         minSdkVersion 15
         targetSdkVersion 22
-        versionCode 35
-        versionName "1.52"
+        versionCode 38
+        versionName "1.503"
         buildConfigField "String", "API_ENDPOINT", "\"https://api.cmonehealth.org\""
         buildConfigField "String", "BASE_URL", "\"https://api.cmonehealth.org\""
         buildConfigField "String", "SHARE_PATTERN", "\"http://www.cmonehealth.org/dodd/reports/%s/share/\""

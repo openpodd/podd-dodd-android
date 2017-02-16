@@ -88,7 +88,13 @@
         <activity
             android:name=".activity.UserLoginActivity"
             android:label="@string/title_activity_user_login"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="dodd" android:host="install-app?q=" />
+            </intent-filter>
+        </activity>
 
         <meta-data
             android:name="io.fabric.ApiKey"

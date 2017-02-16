@@ -389,10 +389,19 @@ public class MyMapFragment extends BaseFragment implements ActivityInterface {
                 dismissLoadingMap();
 
                 if (areaId == 311) {
-                    LatLngBounds mBound = builder.build();
                     int padding = 100;
-                    CameraUpdate cu = CameraUpdateFactory.newLatLngBounds(mBound, padding);
-                    mMap.animateCamera(cu, 1500, null);
+                    LatLngBounds mBound = null;
+
+                    try {
+                        mBound = builder.build();
+
+                        CameraUpdate cu = CameraUpdateFactory.newLatLngBounds(mBound, padding);
+                        mMap.animateCamera(cu, 1500, null);
+                    } catch (IllegalStateException ex) {
+                        LatLng location = new LatLng(13.808277, 100.552206);
+                        CameraUpdate cu = CameraUpdateFactory.newLatLngZoom(location, 11);
+                        mMap.animateCamera(cu, 1500, null);
+                    }
                 } else {
                     ((MainActivity) getActivity()).moveCamera();
                 }
